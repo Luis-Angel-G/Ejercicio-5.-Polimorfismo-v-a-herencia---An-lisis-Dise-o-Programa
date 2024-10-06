@@ -4,8 +4,8 @@ public class Primate extends Mamifero{
     private double cerebro; //En g
 
     public Primate(String nombrec, String habitat, double esperanza, int pelaje, int crias, double peso, double gestacion, boolean extincion,
-    int dieta, String especie, int recinto, int tamanio, int estructura, int inteligencia, double cerebro) {
-        super(nombrec, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, especie, recinto, tamanio);
+    int dieta, double costodieta, String especie, int recinto, int tamanio, int estructura, int inteligencia, double cerebro) {
+        super(nombrec, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, recinto, tamanio);
         this.estructura = estructura;
         this.inteligencia = inteligencia;
         this.cerebro = cerebro;
@@ -48,6 +48,13 @@ public class Primate extends Mamifero{
     }
 
     @Override
+    public double costoComida(){
+        double mescomida =0.0;
+        mescomida = calcularComida() * 30 * costodieta;
+        return mescomida;
+    }
+
+    @Override
     public String toString() {
         String testructura = "";
         if(estructura == 1){
@@ -62,6 +69,6 @@ public class Primate extends Mamifero{
         else if(estructura == 4){
             testructura = "jerarquico";
         }
-        return super.toString() + " estructura: " + testructura + ", nivel de inteligencia: " + inteligencia + ", peso del cerebro: " + cerebro + " g";
+        return super.toString() + " estructura: " + testructura + ", nivel de inteligencia: " + inteligencia + ", peso del cerebro: " + cerebro + " g, comida necesaria al dia: " + calcularComida() + "g, costo de la comida al mes: Q." + costoComida();
     }
 }
