@@ -35,6 +35,6 @@ public abstract class Animal{
 
     @Override
     public String toString() {
-        return "Nombre cientifico: " + nombrec + ", descripcion del habitat: " + habitat + ", esperanza de vida: " + esperanza;
+        return "Nombre cientifico: " + nombrec + ", descripcion del habitat: " + habitat + ", esperanza de vida: " + esperanza + " anios.";
     }
 }
