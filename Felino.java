@@ -51,6 +51,12 @@ public class Felino extends Mamifero{
     }
 
     @Override
+    public double costoComida(){
+        double mescomida =0.0;
+        mescomida = comida * 30 * costocomida;
+    }
+
+    @Override
     public String toString() {
         return super.toString() + " largo de la cola: " + cola + "cm, color: " + color + ", velocidad maxima: " + velocidad + "m/s, comida necesaria: " + calcularComida() + "g";
     }
