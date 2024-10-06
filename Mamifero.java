@@ -5,12 +5,13 @@ public abstract class Mamifero extends Animal{
     protected double gestacion;
     protected boolean extincion;
     protected int dieta;    //Carnivora: 1 y omnivora: 2
+    protected double costodieta;    //Costo por gramo
     protected String especie;
     protected int recinto;  //Pequenio: 1, mediano: 2 y grande: 3
     protected int tamanio;  //Pequenio: 1, mediano: 2 y grande: 3
 
     public Mamifero(String nombrec, String habitat, double esperanza, int pelaje, int crias, double peso, double gestacion, boolean extincion,
-            int dieta, String especie, int recinto, int tamanio) {
+            int dieta, double costodieta, String especie, int recinto, int tamanio) {
         super(nombrec, habitat, esperanza);
         this.pelaje = pelaje;
         this.crias = crias;
@@ -18,6 +19,7 @@ public abstract class Mamifero extends Animal{
         this.gestacion = gestacion;
         this.extincion = extincion;
         this.dieta = dieta;
+        this.costodieta = costodieta;
         this.especie = especie;
         this.recinto = recinto;
         this.tamanio = tamanio;
@@ -71,6 +73,14 @@ public abstract class Mamifero extends Animal{
         this.dieta = dieta;
     }
 
+    public double getCostodieta() {
+        return costodieta;
+    }
+    
+    public void setCostodieta(double costodieta) {
+        this.costodieta = costodieta;
+    }
+
     public String getEspecie() {
         return especie;
     }
@@ -111,6 +121,8 @@ public abstract class Mamifero extends Animal{
         return mesrecinto;
     }
 
+    public abstract double costoComida();
+
     @Override
     public String toString() {
         String tpelaje = "";
@@ -143,10 +155,10 @@ public abstract class Mamifero extends Animal{
             tdieta = "omnivora";
         }
         if(recinto == 1){
-            trecinto = "pequeño";
+            trecinto = "pequeño, de 50 metros cuadrados";
         }
         else{
-            trecinto = "mediano";
+            trecinto = "mediano, de 150 metros cuadrados";
         }
         if(tamanio == 1){
             ttamanio = "pequeño";
@@ -158,7 +170,7 @@ public abstract class Mamifero extends Animal{
             ttamanio = "grande";
         }
         return super.toString() + " tipo de pelaje: " + tpelaje + ", numero de crias: " + crias + ", peso: " + peso + " kg, tiempo de gestacion: " + gestacion
-                + eextincion + ", tipo de dieta: " + tdieta + ", especie: " + especie + ", recinto " + trecinto
+                + eextincion + ", tipo de dieta: " + tdieta + "costo de la dieta por gramo: Q." + costodieta + ", especie: " + especie + ", recinto " + trecinto
                 + ", tamanio: " + ttamanio;
     }
 }
