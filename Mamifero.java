@@ -5,7 +5,7 @@ public abstract class Mamifero extends Animal{
     protected double gestacion;
     protected boolean extincion;
     protected int dieta;    //Carnivora: 1 y omnivora: 2
-    protected double costodieta;
+    protected double costodieta;    //Costo por gramo
     protected String especie;
     protected int recinto;  //Pequenio: 1, mediano: 2 y grande: 3
     protected int tamanio;  //Pequenio: 1, mediano: 2 y grande: 3
@@ -170,7 +170,7 @@ public abstract class Mamifero extends Animal{
             ttamanio = "grande";
         }
         return super.toString() + " tipo de pelaje: " + tpelaje + ", numero de crias: " + crias + ", peso: " + peso + " kg, tiempo de gestacion: " + gestacion
-                + eextincion + ", tipo de dieta: " + tdieta + "costo de la dieta: Q." + costodieta + ", especie: " + especie + ", recinto " + trecinto
+                + eextincion + ", tipo de dieta: " + tdieta + "costo de la dieta por gramo: Q." + costodieta + ", especie: " + especie + ", recinto " + trecinto
                 + ", tamanio: " + ttamanio;
     }
 }
