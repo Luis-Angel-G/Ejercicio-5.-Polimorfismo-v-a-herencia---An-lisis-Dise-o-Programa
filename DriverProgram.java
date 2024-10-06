@@ -14,7 +14,7 @@ public class DriverProgram{
         double peso;
         double gestacion;
         int opcion2;
-        boolean extincion;
+        boolean extincion = false;
         int diet;
         int dieta;
         double costodieta;
