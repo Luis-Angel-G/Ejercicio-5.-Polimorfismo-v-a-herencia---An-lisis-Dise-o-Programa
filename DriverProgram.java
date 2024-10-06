@@ -513,5 +513,6 @@ public class DriverProgram{
                     break;
             }
         }
+        teclado.close();
     }
 }
