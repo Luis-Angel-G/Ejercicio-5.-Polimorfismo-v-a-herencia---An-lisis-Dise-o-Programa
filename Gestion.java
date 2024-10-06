@@ -63,8 +63,13 @@ public class Gestion{
                 Felino felinoModificado = new Felino(animalm, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, cola, color, velocidad);
                 listaAnimales.remove(animal);
                 listaAnimales.add(posicion, felinoModificado);
+                animalmodif = "Se ha modificado la informacion del animal";
+            }
+            else{
+                animalmodif = "No se ha encontrado el animal";
             }
         }
+        return animalmodif;
     }
 
     public String modificarPrimate(String animalm, String habitat, double esperanza, int pelaje, int crias, double peso, double gestacion, boolean extincion,
