@@ -23,7 +23,7 @@ public class DriverProgram{
         int tamanio;
         double presupuesto;
         int drecinto;
-        double precior;
+        double precior = 0.0;
         double gastot;
         double restante;
         int aceptar;
