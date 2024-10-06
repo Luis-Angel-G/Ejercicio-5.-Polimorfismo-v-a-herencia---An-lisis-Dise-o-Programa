@@ -33,6 +33,8 @@ public abstract class Animal{
         this.esperanza = esperanza;
     }
 
+    public abstract double calcularComida();
+
     @Override
     public String toString() {
         return "Nombre cientifico: " + nombrec + ", descripcion del habitat: " + habitat + ", esperanza de vida: " + esperanza + " anios.";
