@@ -40,4 +40,12 @@ public class Gestion{
         listaAnimales.add(nuevoPrimate);
         return "Se agrego el animal correctamente.";
     }
+
+    public String encontrarAnimal(String nombrecie){
+        for(Animal animal : listaAnimales){
+            if(animal.getNombrec().equals(nombrecie)){
+                return animal.toString();
+            }
+        }
+    }
 }
