@@ -4,8 +4,8 @@ public class Primate extends Mamifero{
     private double cerebro; //En g
 
     public Primate(String nombrec, String habitat, double esperanza, int pelaje, int crias, double peso, double gestacion, boolean extincion,
-    int dieta, String especie, int recinto, int tamanio, int estructura, int inteligencia, double cerebro) {
-        super(nombrec, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, especie, recinto, tamanio);
+    int dieta, double costodieta, String especie, int recinto, int tamanio, int estructura, int inteligencia, double cerebro) {
+        super(nombrec, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, recinto, tamanio);
         this.estructura = estructura;
         this.inteligencia = inteligencia;
         this.cerebro = cerebro;
