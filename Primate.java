@@ -62,6 +62,6 @@ public class Primate extends Mamifero{
         else if(estructura == 4){
             testructura = "jerarquico";
         }
-        return super.toString() + " estructura: " + testructura + ", nivel de inteligencia: " + inteligencia + ", peso del cerebro: " + cerebro + " g";
+        return super.toString() + " estructura: " + testructura + ", nivel de inteligencia: " + inteligencia + ", peso del cerebro: " + cerebro + " g, comida necesaria: " + calcularComida() + "g";
     }
 }
