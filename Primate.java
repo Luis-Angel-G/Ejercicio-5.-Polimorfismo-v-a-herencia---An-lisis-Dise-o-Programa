@@ -36,6 +36,18 @@ public class Primate extends Mamifero{
     }
 
     @Override
+    public double calcularComida(int tamanio, double peso){
+        double comida = 0.0;
+        if(tamanio == 1 || tamanio ==2){
+            comida = peso * 0.05;
+        }
+        else if(tamanio == 3){
+            comida = peso * 0.03;
+        }
+        return comida;
+    }
+
+    @Override
     public String toString() {
         String testructura = "";
         if(estructura == 1){
