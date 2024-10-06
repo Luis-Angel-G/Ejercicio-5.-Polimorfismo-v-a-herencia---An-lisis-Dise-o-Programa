@@ -47,6 +47,9 @@ public class Gestion{
             if(animal.getNombrec().equals(nombrecie)){
                 animalencontrado = animal.toString();
             }
+            else{
+                animalencontrado = "No existe este animal en el zoologico";
+            }
         }
         return animalencontrado;
     }
