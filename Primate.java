@@ -51,6 +51,7 @@ public class Primate extends Mamifero{
     public double costoComida(){
         double mescomida =0.0;
         mescomida = comida * 30 * costocomida;
+        return mescomida;
     }
 
     @Override
@@ -68,6 +69,6 @@ public class Primate extends Mamifero{
         else if(estructura == 4){
             testructura = "jerarquico";
         }
-        return super.toString() + " estructura: " + testructura + ", nivel de inteligencia: " + inteligencia + ", peso del cerebro: " + cerebro + " g, comida necesaria: " + calcularComida() + "g, costo de la comida al mes: Q." + costoComida();
+        return super.toString() + " estructura: " + testructura + ", nivel de inteligencia: " + inteligencia + ", peso del cerebro: " + cerebro + " g, comida necesaria al dia: " + calcularComida() + "g, costo de la comida al mes: Q." + costoComida();
     }
 }
