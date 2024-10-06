@@ -49,11 +49,12 @@ public class Primate extends Mamifero{
 
     @Override
     public double costoComida(){
-        double mescomida =0.0;
+        double mescomida = 0.0;
         mescomida = calcularComida() * 30 * costodieta;
         return mescomida;
     }
 
+    @Override
     public double costoTotal(){
         double mestotal = 0.0;
         mestotal = mantenerRecinto() + costoComida();
