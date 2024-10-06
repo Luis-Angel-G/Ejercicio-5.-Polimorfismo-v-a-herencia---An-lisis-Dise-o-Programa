@@ -143,10 +143,10 @@ public abstract class Mamifero extends Animal{
             tdieta = "omnivora";
         }
         if(recinto == 1){
-            trecinto = "pequeño";
+            trecinto = "pequeño, de 50 metros cuadrados";
         }
         else{
-            trecinto = "mediano";
+            trecinto = "mediano, de 150 metros cuadrados";
         }
         if(tamanio == 1){
             ttamanio = "pequeño";
