@@ -85,7 +85,7 @@ public class DriverProgram{
                         teclado.nextLine();
                         System.out.println("Ingrese de que especie es");
                         String especie = teclado.nextLine();
-                        System.out.println("Ingrese el numero del tamanio que tiene:\n1. Pequenio\n2. Mediano\n3. Grande")
+                        System.out.println("Ingrese el numero del tamanio que tiene:\n1. Pequenio\n2. Mediano\n3. Grande");
                         int taman = teclado.nextInt();
                         teclado.nextLine();
                         int tamanio;
