@@ -9,6 +9,7 @@ public abstract class Mamifero extends Animal{
     protected String especie;
     protected int recinto;  //Pequenio: 1, mediano: 2 y grande: 3
     protected int tamanio;  //Pequenio: 1, mediano: 2 y grande: 3
+    
     public Mamifero(int pelaje, int crias, double peso, double esperanza, double gestacion, boolean extincion,
             int dieta, String especie, int recinto, int tamanio) {
         super(nombrec, habitat, esperanza);
