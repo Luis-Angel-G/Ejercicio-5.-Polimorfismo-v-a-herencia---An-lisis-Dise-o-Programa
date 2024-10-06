@@ -122,6 +122,7 @@ public abstract class Mamifero extends Animal{
     }
 
     public abstract double costoComida();
+    public abstract double costoTotal();
 
     @Override
     public String toString() {
