@@ -33,7 +33,9 @@ public class DriverProgram{
             System.out.println("1. Informacion de intercambio");
             System.out.println("2. Informacion de algun animal");
             System.out.println("3. Recibir ejemplar");
-            System.out.println("4. Salir");
+            System.out.println("4. Modificar informacion de un animal");
+            System.out.println("5. Eliminar animal");
+            System.out.println("6. Salir");
             System.out.println("Ingrese alguna opcion");
             int opcion = teclado.nextInt();
             teclado.nextLine();
@@ -507,6 +509,12 @@ public class DriverProgram{
                     }
                     break;
                 case 4:
+                    System.out.println("Ingrese el nombre cientifico del animal que desea modificar");
+                    String animalm = teclado.next
+                    break;
+                case 5:
+                    break;
+                case 6:
                     continuar = false;
                 default:
                     System.out.println("Opcion no valida. Intente de nuevo.");
