@@ -24,6 +24,9 @@ public class DriverProgram{
         double presupuesto;
         int drecinto;
         double precior;
+        double gastot;
+        double restante;
+        int aceptar;
 
         while (continuar){
             System.out.println("Menu");
@@ -319,6 +322,7 @@ public class DriverProgram{
                             teclado.nextLine();
                             switch (drecinto) {
                                 case 1:
+                                    precior = 0.0;
                                     break;
                                 case 2:
                                     System.out.println("Ingrese el costo de construir uno");
@@ -329,7 +333,27 @@ public class DriverProgram{
                                     System.out.println("Opcion no valida. Intente de nuevo.");
                                     break;
                             }
-                            
+                            gastot = gestion.costoFelino(nombrec, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, cola, color, velocidad) + precior;
+                            restante = presupuesto - gastot;
+                            if(restante > 0){
+                                System.out.println("Tiene condiciones para recibir el animal, si lo acepta su presupuesto sera de: Q." + restante);
+                            }
+                            else{
+                                System.out.println("No tiene condiciones para recibir el animal, el presupuesto no alcanza");
+                            }
+                            System.out.println("Aceptar animal?");
+                            System.out.println("1. Si");
+                            System.out.println("2. No");
+                            aceptar = teclado.nextInt();
+                            teclado.nextLine();
+                            switch (aceptar) {
+                                case 1:
+                                    break;
+                                case 2:
+                                    break;
+                                default:
+                                    break;
+                            }
                             break;
                         case 2:
                             System.out.println("Ingrese el nombre cientifico");
