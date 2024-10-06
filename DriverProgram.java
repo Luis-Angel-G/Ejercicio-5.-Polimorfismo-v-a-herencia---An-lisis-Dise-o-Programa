@@ -25,6 +25,11 @@ public class DriverProgram{
                 teclado.nextLine();
                 switch (opcion1) {
                     case 1:
+                        System.out.println("Ingrese el nombre cientifico:");
+                        String nombrec = teclado.nextLine();
+                        System.out.println("Ingrese la descripción del habitat:");
+                        String habitat = teclado.nextLine();
+                        System.out.println("Ingrese la esperanza de vida en años:")
                         break;
                     case 2:
                         break;
