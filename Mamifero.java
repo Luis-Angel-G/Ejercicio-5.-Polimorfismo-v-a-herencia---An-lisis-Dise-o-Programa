@@ -121,7 +121,7 @@ public abstract class Mamifero extends Animal{
         return mesrecinto;
     }
 
-    public abstract double costocomida();
+    public abstract double costoComida();
 
     @Override
     public String toString() {
