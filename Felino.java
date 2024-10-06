@@ -52,6 +52,6 @@ public class Felino extends Mamifero{
 
     @Override
     public String toString() {
-        return super.toString() + " largo de la cola: " + cola + "cm, color: " + color + ", velocidad maxima: " + velocidad + "m/s";
+        return super.toString() + " largo de la cola: " + cola + "cm, color: " + color + ", velocidad maxima: " + velocidad + "m/s, comida necesaria: " + calcularComida() + "g";
     }
 }
