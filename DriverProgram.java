@@ -29,12 +29,27 @@ public class DriverProgram{
                         String nombrec = teclado.nextLine();
                         System.out.println("Ingrese la descripción del habitat:");
                         String habitat = teclado.nextLine();
-                        System.out.println("Ingrese la esperanza de vida en años:")
+                        System.out.println("Ingrese la esperanza de vida en anios:");
+                        double esperanza = teclado.nextDouble();
+                        System.out.println("Ingrese el numero del tipo de pelaje que tiene:\n1. Corto\n2. Largo\n3. Grueso\n4. Ausente");
+                        int pel = teclado.nextInt();
+                        if(pel > 0 && pel < 5){
+                            int pelaje = pel;
+                        }
+                        else{
+                            System.out.println("Opcion no valida. Intente de nuevo");
+                            break;
+                        }
+                        System.out.println("Ingrese el numero de crias en promedio:");
+                        int crias = teclado.nextInt();
+                        System.out.println("Ingrese el peso en kg:");
+                        double peso = teclado.nextDouble();
+                        
                         break;
                     case 2:
                         break;
                     default:
-                        System.out.println("Opción no válida. Intente de nuevo.");
+                        System.out.println("Opcion no valida. Intente de nuevo.");
                 }
                 break;
             case 2:
@@ -44,7 +59,7 @@ public class DriverProgram{
             case 4:
                 continuar = false;
             default:
-                System.out.println("Opción no válida. Intente de nuevo.");
+                System.out.println("Opcion no valida. Intente de nuevo.");
         }
     }
 }
