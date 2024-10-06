@@ -35,8 +35,9 @@ public class DriverProgram{
                         System.out.println("Ingrese el numero del tipo de pelaje que tiene:\n1. Corto\n2. Largo\n3. Grueso\n4. Ausente");
                         int pel = teclado.nextInt();
                         teclado.nextLine();
+                        int pelaje;
                         if(pel > 0 && pel < 5){
-                            int pelaje = pel;
+                            pelaje = pel;
                         }
                         else{
                             System.out.println("Opcion no valida. Intente de nuevo");
@@ -71,20 +72,25 @@ public class DriverProgram{
                         System.out.println("Ingrese el numero de tipo de dieta tiene:\n1. Carnivora\n2. Omnivora");
                         int diet = teclado.nextInt();
                         teclado.nextLine();
+                        int dieta;
                         if(diet == 1 || diet == 2){
-                            int dieta = diet;
+                            dieta = diet;
                         }
                         else{
                             System.out.println("Opcion no valida. Intente de nuevo");
                             break;
                         }
+                        System.out.println("Ingrese el costo de la dieta por g");
+                        double costodieta = teclado.nextDouble();
+                        teclado.nextLine();
                         System.out.println("Ingrese de que especie es");
                         String especie = teclado.nextLine();
                         System.out.println("Ingrese el numero del tamanio que tiene:\n1. Pequenio\n2. Mediano\n3. Grande")
                         int taman = teclado.nextInt();
                         teclado.nextLine();
+                        int tamanio;
                         if(taman == 1 || taman == 2 || taman == 3){
-                            int tamanio = taman;
+                            tamanio = taman;
                         }
                         else{
                             System.out.println("Opcion no valida. Intente de nuevo");
@@ -98,7 +104,7 @@ public class DriverProgram{
                         System.out.println("Ingrese la velocidad maxima en m/s");
                         double velocidad = teclado.nextDouble();
                         teclado.nextLine();
-                        gestion.crearFelino(nombrec, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, recinto, tamanio, cola, color, velocidad);
+                        gestion.crearFelino(nombrec, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, cola, color, velocidad);
                         break;
                     case 2:
                         break;
