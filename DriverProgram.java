@@ -90,6 +90,15 @@ public class DriverProgram{
                             System.out.println("Opcion no valida. Intente de nuevo");
                             break;
                         }
+                        System.out.println("Ingrese el tamanio de la cola en cm");
+                        double cola = teclado.nextDouble();
+                        teclado.nextLine();
+                        System.out.println("Ingrese el color");
+                        String color = teclado.nextLine();
+                        System.out.println("Ingrese la velocidad maxima en m/s");
+                        double velocidad = teclado.nextDouble();
+                        teclado.nextLine();
+                        gestion.crearFelino(nombrec, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, recinto, tamanio, cola, color, velocidad);
                         break;
                     case 2:
                         break;
