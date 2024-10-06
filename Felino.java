@@ -36,6 +36,21 @@ public class Felino extends Mamifero{
     }
 
     @Override
+    public double calcularComida(){
+        double comida = 0.0;
+        if(tamanio == 1){
+            comida = peso * 0.04;
+        }
+        else if(tamanio == 2){
+            comida = peso * 0.06;
+        }
+        else if(tamanio == 3){
+            comida = peso * 0.08;
+        }
+        return comida;
+    }
+
+    @Override
     public String toString() {
         return super.toString() + " largo de la cola: " + cola + "cm, color: " + color + ", velocidad maxima: " + velocidad + "m/s";
     }
