@@ -5,6 +5,22 @@ public class DriverProgram{
         Scanner teclado = new Scanner(System.in);
         Gestion gestion = new Gestion();
         boolean continuar = true;
+        String nombrec;
+        String habitat;
+        double esperanza;
+        int pel;
+        int pelaje;
+        int crias;
+        double peso;
+        double gestacion;
+        int opcion2;
+        boolean extincion;
+        int diet;
+        int dieta;
+        double costodieta;
+        String especie;
+        int taman;
+        int tamanio;
 
         while (continuar){
             System.out.println("Menu");
@@ -27,16 +43,15 @@ public class DriverProgram{
                     switch (opcion1) {
                         case 1:
                             System.out.println("Ingrese el nombre cientifico");
-                            String nombrec = teclado.nextLine();
+                            nombrec = teclado.nextLine();
                             System.out.println("Ingrese la descripcion del habitat");
-                            String habitat = teclado.nextLine();
+                            habitat = teclado.nextLine();
                             System.out.println("Ingrese la esperanza de vida en anios");
-                            double esperanza = teclado.nextDouble();
+                            esperanza = teclado.nextDouble();
                             teclado.nextLine();
                             System.out.println("Ingrese el numero del tipo de pelaje que tiene:\n1. Corto\n2. Largo\n3. Grueso\n4. Ausente");
-                            int pel = teclado.nextInt();
+                            pel = teclado.nextInt();
                             teclado.nextLine();
-                            int pelaje;
                             if(pel > 0 && pel < 5){
                                 pelaje = pel;
                             }
@@ -45,20 +60,19 @@ public class DriverProgram{
                                 break;
                             }
                             System.out.println("Ingrese el numero de crias en promedio");
-                            int crias = teclado.nextInt();
+                            crias = teclado.nextInt();
                             teclado.nextLine();
                             System.out.println("Ingrese el peso en kg:");
-                            double peso = teclado.nextDouble();
+                            peso = teclado.nextDouble();
                             teclado.nextLine();
                             System.out.println("Ingrese el tiempo de gestacion en meses");
-                            double gestacion = teclado.nextDouble();
+                            gestacion = teclado.nextDouble();
                             teclado.nextLine();
                             System.out.println("Seleccione si esta en peligro de extincion");
                             System.out.println("1. Esta en peligro de extincion");
                             System.out.println("2. No esta en peligro de extincion");
-                            int opcion2 = teclado.nextInt();
+                            opcion2 = teclado.nextInt();
                             teclado.nextLine();
-                            boolean extincion = true;
                             switch (opcion2) {
                                 case 1:
                                     extincion = true;
@@ -71,9 +85,8 @@ public class DriverProgram{
                                     break;
                             }
                             System.out.println("Ingrese el numero de tipo de dieta tiene:\n1. Carnivora\n2. Omnivora");
-                            int diet = teclado.nextInt();
+                            diet = teclado.nextInt();
                             teclado.nextLine();
-                            int dieta;
                             if(diet == 1 || diet == 2){
                                 dieta = diet;
                             }
@@ -82,14 +95,13 @@ public class DriverProgram{
                                 break;
                             }
                             System.out.println("Ingrese el costo de la dieta por g");
-                            double costodieta = teclado.nextDouble();
+                            costodieta = teclado.nextDouble();
                             teclado.nextLine();
                             System.out.println("Ingrese de que especie es");
-                            String especie = teclado.nextLine();
+                            especie = teclado.nextLine();
                             System.out.println("Ingrese el numero del tamanio que tiene:\n1. Pequenio\n2. Mediano\n3. Grande");
-                            int taman = teclado.nextInt();
+                            taman = teclado.nextInt();
                             teclado.nextLine();
-                            int tamanio;
                             if(taman == 1 || taman == 2 || taman == 3){
                                 tamanio = taman;
                             }
@@ -108,6 +120,99 @@ public class DriverProgram{
                             System.out.println(gestion.crearFelino(nombrec, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, cola, color, velocidad));
                             break;
                         case 2:
+                            System.out.println("Ingrese el nombre cientifico");
+                            nombrec = teclado.nextLine();
+                            System.out.println("Ingrese la descripcion del habitat");
+                            habitat = teclado.nextLine();
+                            System.out.println("Ingrese la esperanza de vida en anios");
+                            esperanza = teclado.nextDouble();
+                            teclado.nextLine();
+                            System.out.println("Ingrese el numero del tipo de pelaje que tiene:\n1. Corto\n2. Largo\n3. Grueso\n4. Ausente");
+                            pel = teclado.nextInt();
+                            teclado.nextLine();
+                            if(pel > 0 && pel < 5){
+                                pelaje = pel;
+                            }
+                            else{
+                                System.out.println("Opcion no valida. Intente de nuevo");
+                                break;
+                            }
+                            System.out.println("Ingrese el numero de crias en promedio");
+                            crias = teclado.nextInt();
+                            teclado.nextLine();
+                            System.out.println("Ingrese el peso en kg:");
+                            peso = teclado.nextDouble();
+                            teclado.nextLine();
+                            System.out.println("Ingrese el tiempo de gestacion en meses");
+                            gestacion = teclado.nextDouble();
+                            teclado.nextLine();
+                            System.out.println("Seleccione si esta en peligro de extincion");
+                            System.out.println("1. Esta en peligro de extincion");
+                            System.out.println("2. No esta en peligro de extincion");
+                            opcion2 = teclado.nextInt();
+                            teclado.nextLine();
+                            switch (opcion2) {
+                                case 1:
+                                    extincion = true;
+                                    break;
+                                case 2:
+                                    extincion = false;
+                                    break;
+                                default:
+                                    System.out.println("Opcion no valida. Intente de nuevo.");
+                                    break;
+                            }
+                            System.out.println("Ingrese el numero de tipo de dieta tiene:\n1. Carnivora\n2. Omnivora");
+                            diet = teclado.nextInt();
+                            teclado.nextLine();
+                            if(diet == 1 || diet == 2){
+                                dieta = diet;
+                            }
+                            else{
+                                System.out.println("Opcion no valida. Intente de nuevo");
+                                break;
+                            }
+                            System.out.println("Ingrese el costo de la dieta por g");
+                            costodieta = teclado.nextDouble();
+                            teclado.nextLine();
+                            System.out.println("Ingrese de que especie es");
+                            especie = teclado.nextLine();
+                            System.out.println("Ingrese el numero del tamanio que tiene:\n1. Pequenio\n2. Mediano\n3. Grande");
+                            taman = teclado.nextInt();
+                            teclado.nextLine();
+                            if(taman == 1 || taman == 2 || taman == 3){
+                                tamanio = taman;
+                            }
+                            else{
+                                System.out.println("Opcion no valida. Intente de nuevo");
+                                break;
+                            }
+                            System.out.println("Ingrese el numero del tipo de estructura que tiene:\n1. Solitario\n2. Grupal\n3. Familiar\4. Jerarquico");
+                            int estruc = teclado.nextInt();
+                            teclado.nextLine();
+                            int estructura;
+                            if(estruc > 0 && estruc < 5){
+                                estructura = estruc;
+                            }
+                            else{
+                                System.out.println("Opcion no valida. Intente de nuevo");
+                                break;
+                            }
+                            System.out.println("Ingrese el nivel de inteligencia del 1 al 100");
+                            int intel = teclado.nextInt();
+                            teclado.nextLine();
+                            int inteligencia;
+                            if(intel > 0 && intel < 101){
+                                inteligencia = intel;
+                            }
+                            else{
+                                System.out.println("Opcion no valida. Intente de nuevo");
+                                break;
+                            }
+                            System.out.println("Ingrese el peso del cerebro en gramos");
+                            double cerebro = teclado.nextDouble();
+                            teclado.nextLine();
+                            System.out.println(gestion.crearPrimate(nombrec, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, estructura, inteligencia, cerebro));
                             break;
                         default:
                             System.out.println("Opcion no valida. Intente de nuevo.");
