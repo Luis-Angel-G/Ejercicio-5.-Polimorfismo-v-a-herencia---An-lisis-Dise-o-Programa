@@ -57,6 +57,7 @@ public class Felino extends Mamifero{
         return mescomida;
     }
 
+    @Override
     public double costoTotal(){
         double mestotal = 0.0;
         mestotal = mantenerRecinto() + costoComida();
