@@ -105,7 +105,7 @@ public class DriverProgram{
                             System.out.println("Ingrese la velocidad maxima en m/s");
                             double velocidad = teclado.nextDouble();
                             teclado.nextLine();
-                            gestion.crearFelino(nombrec, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, cola, color, velocidad);
+                            System.out.println(gestion.crearFelino(nombrec, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, cola, color, velocidad));
                             break;
                         case 2:
                             break;
