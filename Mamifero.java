@@ -171,7 +171,7 @@ public abstract class Mamifero extends Animal{
             ttamanio = "grande";
         }
         return super.toString() + " tipo de pelaje: " + tpelaje + ", numero de crias: " + crias + ", peso: " + peso + " kg, tiempo de gestacion: " + gestacion
-                + eextincion + ", tipo de dieta: " + tdieta + "costo de la dieta por gramo: Q." + costodieta + ", especie: " + especie + ", recinto " + trecinto
+                + eextincion + " meses, tipo de dieta: " + tdieta + "costo de la dieta por gramo: Q." + costodieta + ", especie: " + especie + ", recinto " + trecinto
                 + ", tamanio: " + ttamanio;
     }
 }
