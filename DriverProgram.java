@@ -28,7 +28,7 @@ public class DriverProgram{
                         case 1:
                             System.out.println("Ingrese el nombre cientifico");
                             String nombrec = teclado.nextLine();
-                            System.out.println("Ingrese la descripción del habitat");
+                            System.out.println("Ingrese la descripcion del habitat");
                             String habitat = teclado.nextLine();
                             System.out.println("Ingrese la esperanza de vida en anios");
                             double esperanza = teclado.nextDouble();
