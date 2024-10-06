@@ -4,8 +4,8 @@ public class Felino extends Mamifero{
     private double velocidad;
 
     public Felino(String nombrec, String habitat, double esperanza, int pelaje, int crias, double peso, double gestacion, boolean extincion,
-    int dieta, double costodieta, String especie, int recinto, int tamanio, double cola, String color, double velocidad) {
-        super(nombrec, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, recinto, tamanio);
+    int dieta, double costodieta, String especie, int tamanio, double cola, String color, double velocidad) {
+        super(nombrec, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio);
         this.cola = cola;
         this.color = color;
         this.velocidad = velocidad;
