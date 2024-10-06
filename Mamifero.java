@@ -100,6 +100,17 @@ public abstract class Mamifero extends Animal{
         this.tamanio = tamanio;
     }
 
+    public int mantenerRecinto(){
+        int mesrecinto = 0;
+        if(recinto == 1){
+            mesrecinto = 100 * 30;
+        }
+        else{
+            mesrecinto = 250 * 30;
+        }
+        return mesrecinto;
+    }
+
     @Override
     public String toString() {
         String tpelaje = "";
