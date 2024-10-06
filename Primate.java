@@ -36,7 +36,7 @@ public class Primate extends Mamifero{
     }
 
     @Override
-    public double calcularComida(int tamanio, double peso){
+    public double calcularComida(){
         double comida = 0.0;
         if(tamanio == 1 || tamanio ==2){
             comida = peso * 0.05;
