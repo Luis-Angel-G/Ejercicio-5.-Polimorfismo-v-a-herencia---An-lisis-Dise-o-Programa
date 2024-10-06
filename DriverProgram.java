@@ -58,7 +58,7 @@ public class DriverProgram{
                             System.out.println("2. No esta en peligro de extincion");
                             int opcion2 = teclado.nextInt();
                             teclado.nextLine();
-                            boolean extincion;
+                            boolean extincion = true;
                             switch (opcion2) {
                                 case 1:
                                     extincion = true;
