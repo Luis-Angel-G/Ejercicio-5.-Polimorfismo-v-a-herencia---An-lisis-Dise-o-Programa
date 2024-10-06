@@ -83,7 +83,7 @@ public abstract class Mamifero extends Animal{
         return recinto;
     }
 
-    public void setRecinto(int tamanio) {
+    public void setRecinto() {
         if(tamanio == 1){
             this.recinto = 1;
         }
