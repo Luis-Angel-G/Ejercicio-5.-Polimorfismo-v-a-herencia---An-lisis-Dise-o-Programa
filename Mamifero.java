@@ -83,8 +83,13 @@ public abstract class Mamifero extends Animal{
         return recinto;
     }
 
-    public void setRecinto(int recinto) {
-        this.recinto = recinto;
+    public void setRecinto(int tamanio) {
+        if(tamanio == 1){
+            this.recinto = 1;
+        }
+        else if(tamanio == 2 || tamanio == 3){
+            this.recinto = 2;
+        }
     }
 
     public int getTamanio() {
@@ -98,9 +103,51 @@ public abstract class Mamifero extends Animal{
     @Override
     public String toString() {
         String tpelaje = "";
-        
-        return super.toString() + "Mamifero [pelaje=" + pelaje + ", crias=" + crias + ", peso=" + peso + ", gestacion=" + gestacion
-                + ", extincion=" + extincion + ", dieta=" + dieta + ", especie=" + especie + ", recinto=" + recinto
-                + ", tamanio=" + tamanio + "]";
+        String eextincion = "";
+        String tdieta = "";
+        String trecinto = "";
+        String ttamanio = "";
+        if(pelaje == 1){
+            tpelaje = "corto";
+        }
+        else if(pelaje == 2){
+            tpelaje = "largo";
+        }
+        else if(pelaje == 3){
+            tpelaje = "grueso";
+        }
+        else if(pelaje == 4){
+            tpelaje = "ausente";
+        }
+        if(extincion){
+            eextincion = "esta en peligro de extincion";
+        }
+        else{
+            eextincion = "no esta en peligro de extincion";
+        }
+        if(dieta == 1){
+            tdieta = "carnivora";
+        }
+        else if (dieta == 2){
+            tdieta = "omnivora";
+        }
+        if(recinto == 1){
+            trecinto = "pequeño";
+        }
+        else{
+            trecinto = "mediano";
+        }
+        if(tamanio == 1){
+            ttamanio = "pequeño";
+        }
+        else if(tamanio == 2){
+            ttamanio = "mediano";
+        }
+        else if(tamanio == 3){
+            ttamanio = "grande";
+        }
+        return super.toString() + " tipo de pelaje: " + tpelaje + ", numero de crias: " + crias + ", peso: " + peso + " kg, tiempo de gestacion: " + gestacion
+                + eextincion + ", tipo de dieta: " + tdieta + ", especie: " + especie + ", recinto " + trecinto
+                + ", tamanio: " + ttamanio;
     }
 }
