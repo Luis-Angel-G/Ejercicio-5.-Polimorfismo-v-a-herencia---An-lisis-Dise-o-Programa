@@ -32,4 +32,9 @@ public abstract class Animal{
     public void setEsperanza(double esperanza) {
         this.esperanza = esperanza;
     }
+
+    @Override
+    public String toString() {
+        return "Nombre cientifico: " + nombrec + ", descripcion del habitat: " + habitat + ", esperanza de vida: " + esperanza;
+    }
 }
