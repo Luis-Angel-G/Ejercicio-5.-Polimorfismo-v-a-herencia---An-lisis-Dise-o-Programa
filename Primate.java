@@ -50,7 +50,7 @@ public class Primate extends Mamifero{
     @Override
     public double costoComida(){
         double mescomida =0.0;
-        mescomida = comida * 30 * costocomida;
+        mescomida = calcularComida() * 30 * costodieta;
         return mescomida;
     }
 
