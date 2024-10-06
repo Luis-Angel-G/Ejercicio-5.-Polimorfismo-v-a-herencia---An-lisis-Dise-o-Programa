@@ -226,6 +226,9 @@ public class DriverProgram{
                     }
                     break;
                 case 2:
+                    System.out.println("Ingrese el nombre cientifico del animal");
+                    String nombrecie = teclado.nextLine();
+                    System.out.println(gestion.encontrarAnimal(nombrecie));
                     break;
                 case 3:
                     System.out.println("Seleccione que tipo de mamifero es el del intercambio");
