@@ -42,10 +42,12 @@ public class Gestion{
     }
 
     public String encontrarAnimal(String nombrecie){
+        String animalencontrado = "";
         for(Animal animal : listaAnimales){
             if(animal.getNombrec().equals(nombrecie)){
-                return animal.toString();
+                animalencontrado = animal.toString();
             }
         }
+        return animalencontrado;
     }
 }
