@@ -510,7 +510,7 @@ public class DriverProgram{
                     break;
                 case 4:
                     System.out.println("Ingrese el nombre cientifico del animal que desea modificar");
-                    String animalm = teclado.next
+                    String animalm = teclado.nextLine();
                     break;
                 case 5:
                     break;
