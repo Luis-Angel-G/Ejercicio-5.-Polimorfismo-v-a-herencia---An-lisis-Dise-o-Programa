@@ -698,6 +698,9 @@ public class DriverProgram{
                     }
                     break;
                 case 5:
+                    System.out.println("Ingrese el nombre cientifico del animal");
+                    String nombreelim = teclado.nextLine();
+                    System.out.println(gestion.eliminarAnimal(nombreelim));
                     break;
                 case 6:
                     continuar = false;
