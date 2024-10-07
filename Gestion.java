@@ -81,7 +81,12 @@ public class Gestion{
                 Primate primateModificado = new Primate(nombrec, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, estructura, inteligencia, cerebro);
                 listaAnimales.remove(animal);
                 listaAnimales.add(posicion, primateModificado);
+                animalmodif = "Se ha modificado la informacion del animal";
+            }
+            else{
+                animalmodif = "No se ha encontrado el animal";
             }
         }
+        return animalmodif;
     }
 }
