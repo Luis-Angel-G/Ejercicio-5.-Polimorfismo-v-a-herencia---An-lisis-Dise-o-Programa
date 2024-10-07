@@ -32,7 +32,7 @@ public class DriverProgram{
         while (continuar){
             System.out.println("Menu");
             System.out.println("1. Informacion de intercambio");
-            System.out.println("2. Informacion de algun animal");
+            System.out.println("2. Informacion de animales del mismo nombre cientifico");
             System.out.println("3. Recibir ejemplar");
             System.out.println("4. Modificar informacion de un animal");
             System.out.println("5. Eliminar animal");
