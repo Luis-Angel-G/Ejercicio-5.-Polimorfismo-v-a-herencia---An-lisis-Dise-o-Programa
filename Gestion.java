@@ -58,7 +58,7 @@ public class Gestion{
     int dieta, double costodieta, String especie, int tamanio, double cola, String color, double velocidad) {
         for (int i = 0; i < listaAnimales.size(); i++) {
             Animal animal = listaAnimales.get(i);
-            if (animal.getNombrec().equals(animalm)) {
+            if (animal.getNombrec().equals(animalm) && animal.getColor().equals(color)) {
                 Felino felinoModificado = new Felino(animalm, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, cola, color, velocidad);
                 listaAnimales.set(i, felinoModificado);
                 return "Se ha modificado la información del animal";
@@ -71,7 +71,7 @@ public class Gestion{
     int dieta, double costodieta, String especie, int tamanio, int estructura, int inteligencia, double cerebro) {
         for (int i = 0; i < listaAnimales.size(); i++) {
             Animal animal = listaAnimales.get(i);
-            if (animal.getNombrec().equals(animalm)) {
+            if (animal.getNombrec().equals(animalm) && animal.getCerebro().equals(cerebro)) {
                 Primate primateModificado = new Primate(animalm, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, estructura, inteligencia, cerebro);
                 listaAnimales.set(i, primateModificado);
                 return "Se ha modificado la información del animal";
