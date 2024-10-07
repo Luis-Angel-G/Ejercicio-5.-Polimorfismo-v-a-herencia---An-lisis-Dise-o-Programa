@@ -47,7 +47,46 @@ public class Gestion{
             if(animal.getNombrec().equals(nombrecie)){
                 animalencontrado = animal.toString();
             }
+            else{
+                animalencontrado = "No existe este animal en el zoologico";
+            }
         }
         return animalencontrado;
+    }
+
+    public String modificarFelino(String animalm, String habitat, double esperanza, int pelaje, int crias, double peso, double gestacion, boolean extincion,
+    int dieta, double costodieta, String especie, int tamanio, double cola, String color, double velocidad){
+        String animalmodif = "";
+        for(Animal animal : listaAnimales){
+            if(animal.getNombrec().equals(animalm)){
+                int posicion = listaAimales.indexOf(animal);
+                Felino felinoModificado = new Felino(animalm, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, cola, color, velocidad);
+                listaAnimales.remove(animal);
+                listaAnimales.add(posicion, felinoModificado);
+                animalmodif = "Se ha modificado la informacion del animal";
+            }
+            else{
+                animalmodif = "No se ha encontrado el animal";
+            }
+        }
+        return animalmodif;
+    }
+
+    public String modificarPrimate(String animalm, String habitat, double esperanza, int pelaje, int crias, double peso, double gestacion, boolean extincion,
+    int dieta, double costodieta, String especie, int tamanio, int estructura, int inteligencia, double cerebro){
+        String animalmodif = "";
+        for(Animal animal : listaAnimales){
+            if(animal.getNombrec().equals(animalm)){
+                int posicion = listaAimales.indexOf(animal);
+                Primate primateModificado = new Primate(nombrec, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, estructura, inteligencia, cerebro);
+                listaAnimales.remove(animal);
+                listaAnimales.add(posicion, primateModificado);
+                animalmodif = "Se ha modificado la informacion del animal";
+            }
+            else{
+                animalmodif = "No se ha encontrado el animal";
+            }
+        }
+        return animalmodif;
     }
 }
