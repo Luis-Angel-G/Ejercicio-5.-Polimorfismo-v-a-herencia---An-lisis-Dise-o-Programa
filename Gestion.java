@@ -61,7 +61,6 @@ public class Gestion{
             if(animal.getNombrec().equals(animalm)){
                 int posicion = listaAnimales.indexOf(animal);
                 Felino felinoModificado = new Felino(animalm, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, cola, color, velocidad);
-                listaAnimales.remove(posicion);
                 listaAnimales.add(posicion, felinoModificado);
                 animalmodif = "Se ha modificado la informacion del animal";
             }
@@ -79,7 +78,6 @@ public class Gestion{
             if(animal.getNombrec().equals(animalm)){
                 int posicion = listaAnimales.indexOf(animal);
                 Primate primateModificado = new Primate(animalm, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, estructura, inteligencia, cerebro);
-                listaAnimales.remove(posicion);
                 listaAnimales.add(posicion, primateModificado);
                 animalmodif = "Se ha modificado la informacion del animal";
             }
