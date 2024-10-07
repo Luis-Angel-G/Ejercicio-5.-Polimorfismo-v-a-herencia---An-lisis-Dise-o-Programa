@@ -57,7 +57,7 @@ public class Gestion{
     public String modificarFelino(String animalm, String habitat, double esperanza, int pelaje, int crias, double peso, double gestacion, boolean extincion,
     int dieta, double costodieta, String especie, int tamanio, double cola, String color, double velocidad) {
         for (int i = 0; i < listaAnimales.size(); i++) {
-            Animal animal = listaAnimales.get(i);
+            Felino animal = listaAnimales.get(i);
             if (animal.getNombrec().equals(animalm) && animal.getColor().equals(color)) {
                 Felino felinoModificado = new Felino(animalm, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, cola, color, velocidad);
                 listaAnimales.set(i, felinoModificado);
@@ -70,7 +70,7 @@ public class Gestion{
     public String modificarPrimate(String animalm, String habitat, double esperanza, int pelaje, int crias, double peso, double gestacion, boolean extincion,
     int dieta, double costodieta, String especie, int tamanio, int estructura, int inteligencia, double cerebro) {
         for (int i = 0; i < listaAnimales.size(); i++) {
-            Animal animal = listaAnimales.get(i);
+            Primate animal = listaAnimales.get(i);
             if (animal.getNombrec().equals(animalm) && animal.getCerebro().equals(cerebro)) {
                 Primate primateModificado = new Primate(animalm, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, estructura, inteligencia, cerebro);
                 listaAnimales.set(i, primateModificado);
