@@ -41,14 +41,18 @@ public class Gestion{
         return "Se agrego el animal correctamente.";
     }
 
-    public String encontrarAnimal(String nombrecie){
+    public String encontrarAnimal(String nombrecie) {
         String animalencontrado = "";
-        for(Animal animal : listaAnimales){
-            if(animal.getNombrec().equals(nombrecie)){
+        boolean encontrado = false; 
+        for (Animal animal : listaAnimales) {
+            if (animal.getNombrec().equals(nombrecie)) {
                 animalencontrado = animalencontrado + "\n" + animal.toString();
+                encontrado = true;
             }
         }
-        animalencontrado = "No se encontro al animal en el zoologico";
+        if (!encontrado) {
+            animalencontrado = "No se encontro al animal en el zoologico";
+        }
         return animalencontrado;
     }
 
