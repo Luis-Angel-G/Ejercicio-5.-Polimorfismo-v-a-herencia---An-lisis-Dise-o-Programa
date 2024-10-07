@@ -90,18 +90,14 @@ public class Gestion{
         return animalmodif;
     }
 
-    public String eliminarAnimal(String nombreelim){
-        String animaleliminado = "";
-        for(Animal animal : listaAnimales){
-            if(animal.getNombrec().equals(nombreelim)){
-                int posicion = listaAnimales.indexOf(animal);
-                listaAnimales.remove(posicion);
-                animaleliminado = "Se ha eliminado el animal";
-            }
-            else{
-                animaleliminado = "No se ha encontrado al animal";
+    public String eliminarAnimal(String nombreelim) {
+        for (int i = 0; i < listaAnimales.size(); i++) {
+            Animal animal = listaAnimales.get(i);
+            if (animal.getNombrec().equals(nombreelim)) {
+                listaAnimales.remove(i);
+                return "Se ha eliminado el animal";
             }
         }
-        return animaleliminado;
-    }
+        return "No se ha encontrado al animal";
+    }    
 }
