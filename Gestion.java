@@ -89,4 +89,18 @@ public class Gestion{
         }
         return animalmodif;
     }
+
+    public String eliminarAnimal(String nombreelim){
+        String animaleliminado = "";
+        for(Animal animal : listaAnimales){
+            if(animal.getNombrec().equals(nombreelim)){
+                listaAnimales.remove(animal);
+                animaleliminado = "Se ha eliminado el animal";
+            }
+            else{
+                animaleliminado = "No se ha encontrado al animal";
+            }
+        }
+        return animaleliminado;
+    }
 }
