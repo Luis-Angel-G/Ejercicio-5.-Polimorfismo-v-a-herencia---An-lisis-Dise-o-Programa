@@ -59,7 +59,7 @@ public class Gestion{
         String animalmodif = "";
         for(Animal animal : listaAnimales){
             if(animal.getNombrec().equals(animalm)){
-                int posicion = listaAimales.indexOf(animal);
+                int posicion = listaAnimales.indexOf(animal);
                 Felino felinoModificado = new Felino(animalm, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, cola, color, velocidad);
                 listaAnimales.remove(animal);
                 listaAnimales.add(posicion, felinoModificado);
@@ -77,8 +77,8 @@ public class Gestion{
         String animalmodif = "";
         for(Animal animal : listaAnimales){
             if(animal.getNombrec().equals(animalm)){
-                int posicion = listaAimales.indexOf(animal);
-                Primate primateModificado = new Primate(nombrec, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, estructura, inteligencia, cerebro);
+                int posicion = listaAnimales.indexOf(animal);
+                Primate primateModificado = new Primate(animalm, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, estructura, inteligencia, cerebro);
                 listaAnimales.remove(animal);
                 listaAnimales.add(posicion, primateModificado);
                 animalmodif = "Se ha modificado la informacion del animal";
