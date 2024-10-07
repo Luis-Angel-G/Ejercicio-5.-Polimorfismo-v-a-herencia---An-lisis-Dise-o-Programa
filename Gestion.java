@@ -42,16 +42,12 @@ public class Gestion{
     }
 
     public String encontrarAnimal(String nombrecie){
-        String animalencontrado = "";
         for(Animal animal : listaAnimales){
             if(animal.getNombrec().equals(nombrecie)){
-                animalencontrado = animal.toString();
-            }
-            else{
-                animalencontrado = "No existe este animal en el zoologico";
+                return animal.toString();
             }
         }
-        return animalencontrado;
+        return "No se ha encontrado el animal";
     }
 
     public String modificarFelino(String animalm, String habitat, double esperanza, int pelaje, int crias, double peso, double gestacion, boolean extincion,
