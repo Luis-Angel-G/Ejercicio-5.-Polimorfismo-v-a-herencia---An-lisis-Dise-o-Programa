@@ -518,8 +518,9 @@ public class DriverProgram{
                     teclado.nextLine();
                     switch (opcion4) {
                         case 1:
-                            System.out.println("Ingrese el nombre cientifico");
+                            System.out.println("Ingrese el nombre cientifico del animal a modificar");
                             animalm = teclado.nextLine();
+                            System.out.println("Ingrese la informacion modificada:");
                             System.out.println("Ingrese la descripcion del habitat");
                             habitat = teclado.nextLine();
                             System.out.println("Ingrese la esperanza de vida en anios");
@@ -596,8 +597,9 @@ public class DriverProgram{
                             System.out.println(gestion.modificarFelino(animalm, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, cola, color, velocidad));
                             break;
                         case 2:
-                            System.out.println("Ingrese el nombre cientifico");
-                            nombrec = teclado.nextLine();
+                            System.out.println("Ingrese el nombre cientifico del animal a modificar");
+                            animalm = teclado.nextLine();
+                            System.out.println("Ingrese la informacion modificada:");
                             System.out.println("Ingrese la descripcion del habitat");
                             habitat = teclado.nextLine();
                             System.out.println("Ingrese la esperanza de vida en anios");
@@ -688,7 +690,7 @@ public class DriverProgram{
                             System.out.println("Ingrese el peso del cerebro en gramos");
                             double cerebro = teclado.nextDouble();
                             teclado.nextLine();
-                            System.out.println(gestion.crearPrimate(nombrec, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, estructura, inteligencia, cerebro));
+                            System.out.println(gestion.crearPrimate(animalm, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, estructura, inteligencia, cerebro));
                             break;
                         default:
                             System.out.println("Opcion no valida. Intente de nuevo.");
