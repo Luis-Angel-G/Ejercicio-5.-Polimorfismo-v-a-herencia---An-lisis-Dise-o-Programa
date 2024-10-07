@@ -73,7 +73,7 @@ public class Gestion{
         for (int i = 0; i < listaAnimales.size(); i++) {
             Animal anima = listaAnimales.get(i);
             Primate animal =(Primate) anima;
-            if (animal.getNombrec().equals(animalm) && animal.getCerebro().equals(cerebro)) {
+            if (animal.getNombrec().equals(animalm) && animal.getCerebro() == cerebro) {
                 Primate primateModificado = new Primate(animalm, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, estructura, inteligencia, cerebro);
                 listaAnimales.set(i, primateModificado);
                 return "Se ha modificado la información del animal";
