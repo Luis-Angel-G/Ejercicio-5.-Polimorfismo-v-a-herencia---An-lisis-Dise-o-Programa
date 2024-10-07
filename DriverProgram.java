@@ -520,6 +520,8 @@ public class DriverProgram{
                         case 1:
                             System.out.println("Ingrese el nombre cientifico del animal a modificar");
                             animalm = teclado.nextLine();
+                            System.out.println("Ingrese el color del animal a modificar");
+                            String color = teclado.nextLine();
                             System.out.println("Ingrese la informacion modificada:");
                             System.out.println("Ingrese la descripcion del habitat");
                             habitat = teclado.nextLine();
@@ -589,8 +591,6 @@ public class DriverProgram{
                             System.out.println("Ingrese el tamanio de la cola en cm");
                             double cola = teclado.nextDouble();
                             teclado.nextLine();
-                            System.out.println("Ingrese el color");
-                            String color = teclado.nextLine();
                             System.out.println("Ingrese la velocidad maxima en m/s");
                             double velocidad = teclado.nextDouble();
                             teclado.nextLine();
@@ -599,6 +599,9 @@ public class DriverProgram{
                         case 2:
                             System.out.println("Ingrese el nombre cientifico del animal a modificar");
                             animalm = teclado.nextLine();
+                            System.out.println("Ingrese el peso del cerebro en gramos del animal a modificar");
+                            double cerebro = teclado.nextDouble();
+                            teclado.nextLine();
                             System.out.println("Ingrese la informacion modificada:");
                             System.out.println("Ingrese la descripcion del habitat");
                             habitat = teclado.nextLine();
@@ -687,9 +690,6 @@ public class DriverProgram{
                                 System.out.println("Opcion no valida. Intente de nuevo");
                                 break;
                             }
-                            System.out.println("Ingrese el peso del cerebro en gramos");
-                            double cerebro = teclado.nextDouble();
-                            teclado.nextLine();
                             System.out.println(gestion.crearPrimate(animalm, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, estructura, inteligencia, cerebro));
                             break;
                         default:
