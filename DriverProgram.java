@@ -196,7 +196,7 @@ public class DriverProgram{
                                 System.out.println("Opcion no valida. Intente de nuevo");
                                 break;
                             }
-                            System.out.println("Ingrese el numero del tipo de estructura que tiene:\n1. Solitario\n2. Grupal\n3. Familiar\4. Jerarquico");
+                            System.out.println("Ingrese el numero del tipo de estructura que tiene:\n1. Solitario\n2. Grupal\n3. Familiar\n4. Jerarquico");
                             int estruc = teclado.nextInt();
                             teclado.nextLine();
                             int estructura;
@@ -432,7 +432,7 @@ public class DriverProgram{
                                 System.out.println("Opcion no valida. Intente de nuevo");
                                 break;
                             }
-                            System.out.println("Ingrese el numero del tipo de estructura que tiene:\n1. Solitario\n2. Grupal\n3. Familiar\4. Jerarquico");
+                            System.out.println("Ingrese el numero del tipo de estructura que tiene:\n1. Solitario\n2. Grupal\n3. Familiar\n4. Jerarquico");
                             int estruc = teclado.nextInt();
                             teclado.nextLine();
                             int estructura;
@@ -665,7 +665,7 @@ public class DriverProgram{
                                 System.out.println("Opcion no valida. Intente de nuevo");
                                 break;
                             }
-                            System.out.println("Ingrese el numero del tipo de estructura que tiene:\n1. Solitario\n2. Grupal\n3. Familiar\4. Jerarquico");
+                            System.out.println("Ingrese el numero del tipo de estructura que tiene:\n1. Solitario\n2. Grupal\n3. Familiar\n4. Jerarquico");
                             int estruc = teclado.nextInt();
                             teclado.nextLine();
                             int estructura;
