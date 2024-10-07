@@ -94,7 +94,8 @@ public class Gestion{
         String animaleliminado = "";
         for(Animal animal : listaAnimales){
             if(animal.getNombrec().equals(nombreelim)){
-                listaAnimales.remove(animal);
+                int posicion = listaAnimales.indexOf(animal);
+                listaAnimales.remove(posicion);
                 animaleliminado = "Se ha eliminado el animal";
             }
             else{
