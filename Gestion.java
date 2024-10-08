@@ -102,7 +102,7 @@ public class Gestion{
             Felino animal = (Felino) anima;
             if (animal.getNombrec().equals(animalm) && animal.getColor().equals(color)){
                 if (animal.getRecinto() <= r){
-                    req = "El otro zoologico tiene las condiciones necesarias para recibir el animal.";
+                    req = "El otro zoologico tiene las condiciones necesarias para recibir el animal";
                 }
                 else if (animal.getRecinto() > r){
                     req = "El otro zoologico no tiene las condiciones necesarias para recibir el animal";
@@ -122,7 +122,7 @@ public class Gestion{
             Primate animal = (Primate) anima;
             if (animal.getNombrec().equals(animalm) && animal.getCerebro() == cerebro){
                 if (animal.getRecinto() <= r){
-                    req = "El otro zoologico tiene las condiciones necesarias para recibir el animal.";
+                    req = "El otro zoologico tiene las condiciones necesarias para recibir el animal";
                 }
                 else if (animal.getRecinto() > r){
                     req = "El otro zoologico no tiene las condiciones necesarias para recibir el animal";
