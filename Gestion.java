@@ -140,4 +140,15 @@ public class Gestion{
         }
         return "No se ha encontrado el animal";
     }
+
+    public String enviarAnimal(String nombreelim) {
+        for (int i = 0; i < listaAnimales.size(); i++) {
+            Animal animal = listaAnimales.get(i);
+            if (animal.getNombrec().equals(nombreelim)) {
+                listaAnimales.remove(i);
+                return "Se ha enviado el animal";
+            }
+        }
+        return "No se ha enviado el animal";
+    }
 }
