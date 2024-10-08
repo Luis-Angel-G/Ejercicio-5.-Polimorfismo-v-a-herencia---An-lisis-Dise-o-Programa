@@ -45,7 +45,7 @@ public class Gestion{
         String animalencontrado = "";
         boolean encontrado = false; 
         for (Animal animal : listaAnimales) {
-            if (animal.getNombrec().equals(nombrecie)) {
+            if (animal.getNombrec().equalsIgnoreCase(nombrecie)) {
                 animalencontrado = animalencontrado + "\n" + animal.toString();
                 encontrado = true;
             }
@@ -61,7 +61,7 @@ public class Gestion{
         for (int i = 0; i < listaAnimales.size(); i++) {
             Animal anima = listaAnimales.get(i);
             Felino animal = (Felino) anima;
-            if (animal.getNombrec().equals(animalm) && animal.getColor().equals(color)) {
+            if (animal.getNombrec().equalsIgnoreCase(animalm) && animal.getColor().equalsIgnoreCase(color)) {
                 Felino felinoModificado = new Felino(animalm, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, cola, color, velocidad);
                 listaAnimales.set(i, felinoModificado);
                 return "Se ha modificado la informacion del animal";
@@ -75,7 +75,7 @@ public class Gestion{
         for (int i = 0; i < listaAnimales.size(); i++) {
             Animal anima = listaAnimales.get(i);
             Primate animal =(Primate) anima;
-            if (animal.getNombrec().equals(animalm) && animal.getCerebro() == cerebro) {
+            if (animal.getNombrec().equalsIgnoreCase(animalm) && animal.getCerebro() == cerebro) {
                 Primate primateModificado = new Primate(animalm, habitat, esperanza, pelaje, crias, peso, gestacion, extincion, dieta, costodieta, especie, tamanio, estructura, inteligencia, cerebro);
                 listaAnimales.set(i, primateModificado);
                 return "Se ha modificado la informacion del animal";
@@ -87,7 +87,7 @@ public class Gestion{
     public String eliminarAnimal(String nombreelim) {
         for (int i = 0; i < listaAnimales.size(); i++) {
             Animal animal = listaAnimales.get(i);
-            if (animal.getNombrec().equals(nombreelim)) {
+            if (animal.getNombrec().equalsIgnoreCase(nombreelim)) {
                 listaAnimales.remove(i);
                 return "Se ha eliminado el animal";
             }
@@ -99,7 +99,7 @@ public class Gestion{
         for(int i = 0; i < listaAnimales.size(); i++){
             Animal anima = listaAnimales.get(i);
             Felino animal = (Felino) anima;
-            if(animal.getNombrec().equals(animalm) && animal.getColor().equals(color)){
+            if(animal.getNombrec().equalsIgnoreCase(animalm) && animal.getColor().equalsIgnoreCase(color)){
                 int recinto = animal.getRecinto();
                 if(recinto == 1 && recinto <= r){
                     return "Se requiere de un recinto pequenio o superior. El otro zoologico tiene las condiciones necesarias para recibir el animal.";
@@ -122,7 +122,7 @@ public class Gestion{
         for(int i = 0; i < listaAnimales.size(); i++){
             Animal anima = listaAnimales.get(i);
             Primate animal = (Primate) anima;
-            if(animal.getNombrec().equals(animalm) && animal.getCerebro() == cerebro){
+            if(animal.getNombrec().equalsIgnoreCase(animalm) && animal.getCerebro() == cerebro){
                 int recinto = animal.getRecinto();
                 if(recinto == 1 && recinto <= r){
                     return "Se requiere de un recinto pequenio o superior. El otro zoologico tiene las condiciones necesarias para recibir el animal.";
@@ -144,7 +144,7 @@ public class Gestion{
     public String enviarAnimal(String nombreelim) {
         for (int i = 0; i < listaAnimales.size(); i++) {
             Animal animal = listaAnimales.get(i);
-            if (animal.getNombrec().equals(nombreelim)) {
+            if (animal.getNombrec().equalsIgnoreCase(nombreelim)) {
                 listaAnimales.remove(i);
                 return "Se ha enviado el animal";
             }
