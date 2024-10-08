@@ -28,6 +28,9 @@ public class DriverProgram{
         double restante;
         int aceptar;
         String animalm;
+        int r;
+        double costo;
+        int opcion6;
 
         while (continuar){
             System.out.println("Menu");
@@ -716,13 +719,56 @@ public class DriverProgram{
                             animalm = teclado.nextLine();
                             System.out.println("Ingrese el color del animal a enviar");
                             String color = teclado.nextLine();
-                            
+                            System.out.println("Ingrese el numero del recinto de mayor tamanio disponible en el otro zoologico");
+                            r = teclado.nextInt();
+                            teclado.nextLine();
+                            System.out.println("Ingrese el costo del transporte");
+                            costo = teclado.nextDouble();
+                            teclado.nextLine();
+                            System.out.println(gestion.requisitoEspacioF(animalm, color, r) + ". El costo del transporte seria de: Q." + costo);
+                            System.out.println("Desea enviar animal?");
+                            System.out.println("1. Si");
+                            System.out.println("2. No");
+                            opcion6 = teclado.nextInt();
+                            teclado.nextLine();
+                            switch (opcion6) {
+                                case 1:
+                                System.out.println(gestion.enviarAnimal(animalm));
+                                    break;
+                                case 2:
+                                    break;
+                                default:
+                                    System.out.println("Opcion no valida. Intente de nuevo.");
+                                    break;
+                            }
                         case 2:
                             System.out.println("Ingrese el nombre cientifico del animal a enviar");
                             animalm = teclado.nextLine();
                             System.out.println("Ingrese el peso del cerebro en gramos del animal a enviar");
                             double cerebro = teclado.nextDouble();
                             teclado.nextLine();
+                            System.out.println("Ingrese el numero del recinto de mayor tamanio disponible en el otro zoologico");
+                            r = teclado.nextInt();
+                            teclado.nextLine();
+                            System.out.println("Ingrese el costo del transporte");
+                            costo = teclado.nextDouble();
+                            teclado.nextLine();
+                            System.out.println(gestion.requisitoEspacioP(animalm, cerebro, r) + ". El costo del transporte seria de: Q." + costo);
+                            System.out.println("Desea enviar animal?");
+                            System.out.println("1. Si");
+                            System.out.println("2. No");
+                            opcion6 = teclado.nextInt();
+                            teclado.nextLine();
+                            switch (opcion6) {
+                                case 1:
+                                System.out.println(gestion.enviarAnimal(animalm));
+                                    break;
+                                case 2:
+                                    break;
+                                default:
+                                    System.out.println("Opcion no valida. Intente de nuevo.");
+                                    break;
+                            }
                         default:
                             System.out.println("Opcion no valida. Intente de nuevo.");
                             break;
