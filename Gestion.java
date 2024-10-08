@@ -96,49 +96,55 @@ public class Gestion{
     }
 
     public String requisitoEspacioF(String animalm, String color, int r){
-        for(int i = 0; i < listaAnimales.size(); i++){
+        String req = "";
+        for (int i = 0; i < listaAnimales.size(); i++){
             Animal anima = listaAnimales.get(i);
             Felino animal = (Felino) anima;
-            if(animal.getNombrec().equals(animalm) && animal.getColor().equals(color)){
+            if (animal.getNombrec().equals(animalm) && animal.getColor().equals(color)){
                 int recinto = animal.getRecinto();
-                if(recinto == 1 && recinto <= r){
-                    return "Se requiere de un recinto pequenio o superior. El otro zoologico tiene las condiciones necesarias para recibir el animal.";
+                if (recinto == 1 && recinto <= r){
+                    req = "Se requiere de un recinto pequenio o superior. El otro zoologico tiene las condiciones necesarias para recibir el animal.";
                 }
-                else if(recinto == 1 && recinto > r){
-                    return "Se requiere de un recinto pequenio o superior. El otro zoologico no tiene las condiciones necesarias para recibir el animal";
+                else if (recinto == 1 && recinto > r){
+                    req = "Se requiere de un recinto pequenio o superior. El otro zoologico no tiene las condiciones necesarias para recibir el animal";
                 }
                 else if (recinto == 2 && recinto <= r){
-                    return "Se requiere de un recinto mediano o superior. El otro zoologico tiene las condiciones necesarias para recibir el animal.";
+                    req = "Se requiere de un recinto mediano o superior. El otro zoologico tiene las condiciones necesarias para recibir el animal.";
                 }
-                else if(recinto == 2 && recinto > r){
-                    return "Se requiere de un recinto mediano o superior. El otro zoologico no tiene las condiciones necesarias para recibir el animal";
+                else if (recinto == 2 && recinto > r){
+                    req = "Se requiere de un recinto mediano o superior. El otro zoologico no tiene las condiciones necesarias para recibir el animal";
+                }
+                else{
+                    req = "No se encontro el animal.";
                 }
             }
         }
-        return "No se ha encontrado el animal";
+        return req;
     }
 
     public String requisitoEspacioP(String animalm, double cerebro, int r){
-        for(int i = 0; i < listaAnimales.size(); i++){
+        String req = "";
+        for (int i = 0; i < listaAnimales.size(); i++){
             Animal anima = listaAnimales.get(i);
             Primate animal = (Primate) anima;
-            if(animal.getNombrec().equals(animalm) && animal.getCerebro() == cerebro){
+            if (animal.getNombrec().equals(animalm) && animal.getCerebro() == cerebro){
                 int recinto = animal.getRecinto();
-                if(recinto == 1 && recinto <= r){
-                    return "Se requiere de un recinto pequenio o superior. El otro zoologico tiene las condiciones necesarias para recibir el animal.";
+                if (recinto == 1 && recinto <= r){
+                    req = "Se requiere de un recinto pequenio o superior. El otro zoologico tiene las condiciones necesarias para recibir el animal.";
                 }
-                else if(recinto == 1 && recinto > r){
-                    return "Se requiere de un recinto pequenio o superior. El otro zoologico no tiene las condiciones necesarias para recibir el animal";
+                else if (recinto == 1 && recinto > r){
+                    req = "Se requiere de un recinto pequenio o superior. El otro zoologico no tiene las condiciones necesarias para recibir el animal";
                 }
                 else if (recinto == 2 && recinto <= r){
-                    return "Se requiere de un recinto mediano o superior. El otro zoologico tiene las condiciones necesarias para recibir el animal.";
+                    req = "Se requiere de un recinto mediano o superior. El otro zoologico tiene las condiciones necesarias para recibir el animal.";
                 }
-                else if(recinto == 2 && recinto > r){
-                    return "Se requiere de un recinto mediano o superior. El otro zoologico no tiene las condiciones necesarias para recibir el animal";
+                else if (recinto == 2 && recinto > r){
+                    req = "Se requiere de un recinto mediano o superior. El otro zoologico no tiene las condiciones necesarias para recibir el animal";
                 }
+                else req = "No se encontro el animal";
             }
         }
-        return "No se ha encontrado el animal";
+        return req;
     }
 
     public String enviarAnimal(String nombreelim) {
