@@ -101,21 +101,20 @@ public class Gestion{
             Animal anima = listaAnimales.get(i);
             Felino animal = (Felino) anima;
             if (animal.getNombrec().equals(animalm) && animal.getColor().equals(color)){
-                int recinto = animal.getRecinto();
-                if (recinto == 1 && recinto <= r){
+                if (animal.getRecinto() == 1 && animal.getRecinto() <= r){
                     req = "Se requiere de un recinto pequenio o superior. El otro zoologico tiene las condiciones necesarias para recibir el animal.";
                 }
-                else if (recinto == 1 && recinto > r){
+                else if (animal.getRecinto() == 1 && animal.getRecinto() > r){
                     req = "Se requiere de un recinto pequenio o superior. El otro zoologico no tiene las condiciones necesarias para recibir el animal";
                 }
-                else if (recinto == 2 && recinto <= r){
+                else if (animal.getRecinto() == 2 && animal.getRecinto() <= r){
                     req = "Se requiere de un recinto mediano o superior. El otro zoologico tiene las condiciones necesarias para recibir el animal.";
                 }
-                else if (recinto == 2 && recinto > r){
+                else if (animal.getRecinto() == 2 && animal.getRecinto() > r){
                     req = "Se requiere de un recinto mediano o superior. El otro zoologico no tiene las condiciones necesarias para recibir el animal";
                 }
                 else{
-                    req = "No se encontro el animal.";
+                    req = "No se encontro el animal";
                 }
             }
         }
@@ -128,17 +127,16 @@ public class Gestion{
             Animal anima = listaAnimales.get(i);
             Primate animal = (Primate) anima;
             if (animal.getNombrec().equals(animalm) && animal.getCerebro() == cerebro){
-                int recinto = animal.getRecinto();
-                if (recinto == 1 && recinto <= r){
+                if (animal.getRecinto() == 1 && animal.getRecinto() <= r){
                     req = "Se requiere de un recinto pequenio o superior. El otro zoologico tiene las condiciones necesarias para recibir el animal.";
                 }
-                else if (recinto == 1 && recinto > r){
+                else if (animal.getRecinto() == 1 && animal.getRecinto() > r){
                     req = "Se requiere de un recinto pequenio o superior. El otro zoologico no tiene las condiciones necesarias para recibir el animal";
                 }
-                else if (recinto == 2 && recinto <= r){
+                else if (animal.getRecinto() == 2 && animal.getRecinto() <= r){
                     req = "Se requiere de un recinto mediano o superior. El otro zoologico tiene las condiciones necesarias para recibir el animal.";
                 }
-                else if (recinto == 2 && recinto > r){
+                else if (animal.getRecinto() == 2 && animal.getRecinto() > r){
                     req = "Se requiere de un recinto mediano o superior. El otro zoologico no tiene las condiciones necesarias para recibir el animal";
                 }
                 else req = "No se encontro el animal";
