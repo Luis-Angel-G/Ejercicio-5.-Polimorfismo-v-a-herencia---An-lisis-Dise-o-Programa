@@ -736,7 +736,7 @@ public class DriverProgram{
                             System.out.println("Ingrese el costo del transporte");
                             costo = teclado.nextDouble();
                             teclado.nextLine();
-                            System.out.println(gestion.recintoF(animalm, color) + ". " + gestion.requisitoEspacioF(animalm, color, re) + ". El costo del transporte seria de: Q." + costo);
+                            System.out.println(gestion.requisitoEspacioF(animalm, color, re) + ". El costo del transporte seria de: Q." + costo);
                             System.out.println("Desea enviar animal?");
                             System.out.println("1. Si");
                             System.out.println("2. No");
@@ -776,7 +776,7 @@ public class DriverProgram{
                             System.out.println("Ingrese el costo del transporte");
                             costo = teclado.nextDouble();
                             teclado.nextLine();
-                            System.out.println(gestion.recintoP(animalm, cerebro) + ". " + gestion.requisitoEspacioP(animalm, cerebro, re) + ". El costo del transporte seria de: Q." + costo);
+                            System.out.println(gestion.requisitoEspacioP(animalm, cerebro, re) + ". El costo del transporte seria de: Q." + costo);
                             System.out.println("Desea enviar animal?");
                             System.out.println("1. Si");
                             System.out.println("2. No");
