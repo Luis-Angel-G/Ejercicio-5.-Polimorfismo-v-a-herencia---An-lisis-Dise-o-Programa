@@ -135,14 +135,48 @@ public class Gestion{
         return req;
     }
 
-    public String enviarAnimal(String nombreelim) {
+    public String enviarAnimal(String animalm) {
         for (int i = 0; i < listaAnimales.size(); i++) {
             Animal animal = listaAnimales.get(i);
-            if (animal.getNombrec().equalsIgnoreCase(nombreelim)) {
+            if (animal.getNombrec().equalsIgnoreCase(animalm)) {
                 listaAnimales.remove(i);
                 return "Se ha enviado el animal";
             }
         }
         return "No se ha enviado el animal";
+    }
+
+    public String recintoF(String animalm, String color){
+        String rec = "";
+        for (int i = 0; i < listaAnimales.size(); i++){
+            Animal anima = listaAnimales.get(i);
+            Felino animal = (Felino) anima;
+            if (animal.getNombrec().equals(animalm) && animal.getColor() == color){
+                if (animal.getRecinto() == 1){
+                    rec = "El recinto necesario es uno pequenio";
+                }
+                else if (animal.getRecinto() == 2){
+                    rec = "El recinto necesario es uno mediano";
+                }
+            }
+        }
+        return rec;
+    }
+
+    public String recintoP(String animalm, double cerebro){
+        String rec = "";
+        for (int i = 0; i < listaAnimales.size(); i++){
+            Animal anima = listaAnimales.get(i);
+            Primate animal = (Primate) anima;
+            if (animal.getNombrec().equals(animalm) && animal.getCerebro() == cerebro){
+                if (animal.getRecinto() == 1){
+                    rec = "El recinto necesario es uno pequenio";
+                }
+                else if (animal.getRecinto() == 2){
+                    rec = "El recinto necesario es uno mediano";
+                }
+            }
+        }
+        return rec;
     }
 }
