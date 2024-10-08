@@ -36,7 +36,8 @@ public class DriverProgram{
             System.out.println("3. Recibir ejemplar");
             System.out.println("4. Modificar informacion de un animal");
             System.out.println("5. Eliminar animal");
-            System.out.println("6. Salir");
+            System.out.println("6. Enviar animal");
+            System.out.println("7. Salir");
             System.out.println("Ingrese alguna opcion");
             int opcion = teclado.nextInt();
             teclado.nextLine();
@@ -703,6 +704,31 @@ public class DriverProgram{
                     System.out.println(gestion.eliminarAnimal(nombreelim));
                     break;
                 case 6:
+                    System.out.println("Seleccione que tipo de mamifero es el que desea enviar");
+                    System.out.println("1. Felino");
+                    System.out.println("2. Primate");
+                    System.out.println("Ingrese alguna opcion");
+                    int opcion5 = teclado.nextInt();
+                    teclado.nextLine();
+                    switch (opcion5) {
+                        case 1:
+                            System.out.println("Ingrese el nombre cientifico del animal a enviar");
+                            animalm = teclado.nextLine();
+                            System.out.println("Ingrese el color del animal a enviar");
+                            String color = teclado.nextLine();
+                            
+                        case 2:
+                            System.out.println("Ingrese el nombre cientifico del animal a enviar");
+                            animalm = teclado.nextLine();
+                            System.out.println("Ingrese el peso del cerebro en gramos del animal a enviar");
+                            double cerebro = teclado.nextDouble();
+                            teclado.nextLine();
+                        default:
+                            System.out.println("Opcion no valida. Intente de nuevo.");
+                            break;
+                    }
+                    break;
+                case 7:
                     continuar = false;
                 default:
                     System.out.println("Opcion no valida. Intente de nuevo.");
