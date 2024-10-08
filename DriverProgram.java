@@ -31,7 +31,7 @@ public class DriverProgram{
         int r;
         double costo;
         int opcion6;
-        int re;
+        int re = 3;
 
         while (continuar){
             System.out.println("Menu");
