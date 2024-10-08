@@ -747,6 +747,7 @@ public class DriverProgram{
                                 System.out.println(gestion.enviarAnimal(animalm));
                                     break;
                                 case 2:
+                                    System.out.println("No se envio el animal.");
                                     break;
                                 default:
                                     System.out.println("Opcion no valida. Intente de nuevo.");
@@ -785,6 +786,7 @@ public class DriverProgram{
                                 System.out.println(gestion.enviarAnimal(animalm));
                                     break;
                                 case 2:
+                                    System.out.println("No se envio el animal.");
                                     break;
                                 default:
                                     System.out.println("Opcion no valida. Intente de nuevo.");
