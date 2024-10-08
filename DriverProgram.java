@@ -753,6 +753,7 @@ public class DriverProgram{
                                     System.out.println("Opcion no valida. Intente de nuevo.");
                                     break;
                             }
+                            break;
                         case 2:
                             System.out.println("Ingrese el nombre cientifico del animal a enviar");
                             animalm = teclado.nextLine();
@@ -792,6 +793,7 @@ public class DriverProgram{
                                     System.out.println("Opcion no valida. Intente de nuevo.");
                                     break;
                             }
+                            break;
                         default:
                             System.out.println("Opcion no valida. Intente de nuevo.");
                             break;
