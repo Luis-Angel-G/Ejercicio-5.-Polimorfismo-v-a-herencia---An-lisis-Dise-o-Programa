@@ -93,5 +93,62 @@ public class Gestion{
             }
         }
         return "No se ha encontrado al animal";
-    }    
+    }
+
+    public String requisitoEspacioF(String animalm, String color, int r){
+        for(int i = 0; i < listaAnimales.size(); i++){
+            Animal anima = listaAnimales.get(i);
+            Felino animal = (Felino) anima;
+            if(animal.getNombrec().equals(animalm) && animal.getColor().equals(color)){
+                int recinto = animal.getRecinto();
+                if(recinto == 1 && recinto <= r){
+                    return "Se requiere de un recinto pequenio o superior. El otro zoologico tiene las condiciones necesarias para recibir el animal.";
+                }
+                else if(recinto == 1 && recinto > r){
+                    return "Se requiere de un recinto pequenio o superior. El otro zoologico no tiene las condiciones necesarias para recibir el animal";
+                }
+                else if (recinto == 2 && recinto <= r){
+                    return "Se requiere de un recinto mediano o superior. El otro zoologico tiene las condiciones necesarias para recibir el animal.";
+                }
+                else if(recinto == 2 && recinto > r){
+                    return "Se requiere de un recinto mediano o superior. El otro zoologico no tiene las condiciones necesarias para recibir el animal";
+                }
+            }
+        }
+        return "No se ha encontrado el animal";
+    }
+
+    public String requisitoEspacioP(String animalm, double cerebro, int r){
+        for(int i = 0; i < listaAnimales.size(); i++){
+            Animal anima = listaAnimales.get(i);
+            Primate animal = (Primate) anima;
+            if(animal.getNombrec().equals(animalm) && animal.getCerebro() == cerebro){
+                int recinto = animal.getRecinto();
+                if(recinto == 1 && recinto <= r){
+                    return "Se requiere de un recinto pequenio o superior. El otro zoologico tiene las condiciones necesarias para recibir el animal.";
+                }
+                else if(recinto == 1 && recinto > r){
+                    return "Se requiere de un recinto pequenio o superior. El otro zoologico no tiene las condiciones necesarias para recibir el animal";
+                }
+                else if (recinto == 2 && recinto <= r){
+                    return "Se requiere de un recinto mediano o superior. El otro zoologico tiene las condiciones necesarias para recibir el animal.";
+                }
+                else if(recinto == 2 && recinto > r){
+                    return "Se requiere de un recinto mediano o superior. El otro zoologico no tiene las condiciones necesarias para recibir el animal";
+                }
+            }
+        }
+        return "No se ha encontrado el animal";
+    }
+
+    public String enviarAnimal(String nombreelim) {
+        for (int i = 0; i < listaAnimales.size(); i++) {
+            Animal animal = listaAnimales.get(i);
+            if (animal.getNombrec().equals(nombreelim)) {
+                listaAnimales.remove(i);
+                return "Se ha enviado el animal";
+            }
+        }
+        return "No se ha enviado el animal";
+    }
 }
